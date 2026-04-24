@@ -6,14 +6,14 @@
 
 Backend service yang dirancang untuk melakukan kalkulasi teknis otomatis dan menghasilkan laporan perhitungan (report) untuk proyek **Koribali**. Proyek ini menerapkan standar engineering yang ketat dengan pemisahan logika kalkulasi dan orkestrasi layanan.
 
-## 🚀 Fitur Utama
+## Fitur Utama
 
 * **Automated Engineering Calculation:** Eksekusi formula teknis secara presisi melalui layer *calculators*.
 * **Modular Report Generation:** Pembuatan laporan perhitungan yang sistematis.
 * **Clean Architecture:** Pemisahan tanggung jawab yang jelas antara API logic (*routes*), business logic (*services*), dan formula (*calculators*).
 * **Standardized Environment:** Manajemen dependensi yang aman dan terisolasi menggunakan Pipenv.
 
-## 🛠️ Tech Stack
+## Tech Stacks
 
 * **Language:** Python 3.8+
 * **Dependency Management:** Pipenv
@@ -90,9 +90,6 @@ Kami menjaga kualitas kode dengan pengujian rutin dan linting otomatis:
 
 ---
 
-
-
----
 
 ### Apa yang saya tingkatkan?
 1.  **Badges:** Menambahkan badge untuk versi Python dan Linter (Ruff) agar terlihat lebih seperti repo profesional.
