@@ -21,7 +21,7 @@ Backend service yang dirancang untuk melakukan kalkulasi teknis otomatis dan men
 * **Linter:** Ruff
 * **Standards:** Conventional Commits & Gitflow
 
-## 📁 Struktur Folder
+## Struktur Folder
 
 Proyek ini menggunakan **Feature-based Structure** untuk memastikan skalabilitas:
 
@@ -41,7 +41,7 @@ koribali_calculation_report/
 └── README.md
 ```
 
-## ⚙️ Instalasi & Persiapan
+## Instalasi & Persiapan
 
 1.  **Clone Repository:**
     ```bash
@@ -60,14 +60,14 @@ koribali_calculation_report/
     pipenv shell
     ```
 
-## 🚀 Cara Menjalankan
+## Cara Menjalankan
 
 Untuk menjalankan script utama atau memulai service:
 ```bash
 python run.py
 ```
 
-## 🧪 Testing & Quality Gate
+## Testing & Quality Gate
 
 Kami menjaga kualitas kode dengan pengujian rutin dan linting otomatis:
 
@@ -80,7 +80,7 @@ Kami menjaga kualitas kode dengan pengujian rutin dan linting otomatis:
     ruff check .
     ```
 
-## 🤝 Kontribusi
+## Kontribusi
 
 1.  Lakukan **Fork** pada repository ini.
 2.  Buat branch fitur baru (`git checkout -b fitur/NamaFitur`).
@@ -90,7 +90,7 @@ Kami menjaga kualitas kode dengan pengujian rutin dan linting otomatis:
 
 ---
 
-```
+
 
 ---
 
