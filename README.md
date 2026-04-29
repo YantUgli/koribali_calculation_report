@@ -1,6 +1,6 @@
 # Koribali Calculation Report
 
-[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
+[![Python Version](https://img.shields.io/badge/python-3.12-blue)](https://www.python.org/)
 [![Linting: Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![Architecture: Feature--Based](https://img.shields.io/badge/Architecture-Feature--Based-green)](#struktur-folder)
 

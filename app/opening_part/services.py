@@ -6,7 +6,7 @@ from app.opening_part.calculators import (
 )
 from app.opening_part.calculators import gross_section
 
-def evaluate_pole_opening(data: OpeningPartInput) -> dict:
+def evaluate_pole_opening(data: OpeningPartInput, type=0) -> dict:
     """
     Orchestrator untuk mengeksekusi 4 tahapan kalkulasi Opening Part.
     1. Gross Section
@@ -51,14 +51,23 @@ def evaluate_pole_opening(data: OpeningPartInput) -> dict:
 
     # Return Payload untuk dikirim ke routes/controller
     # belum memakai utils/response.py
-    return {
-        # "status": "success",
-        "conclusion": "OK" if uc_props["is_safe"] else "NG",
-        # "test" : modulus_penampang_utuh,
-        "details": {
-            "tahap_1_gross_section": gross_props,
-            "tahap_2_net_section": net_props,
-            "tahap_3_stress": stress_props,
-            "tahap_4_unity_check": uc_props
+    if type == 0:
+        return {
+            "conclusion": "OK" if uc_props["is_safe"] else "NG",
+            "details": {
+                "tahap_1_gross_section": gross_props,
+                "tahap_2_net_section": net_props,
+                "tahap_3_stress": stress_props,
+                "tahap_4_unity_check": uc_props
+            }
         }
-    }
+    
+    return {
+            "conclusion": "OK" if uc_props["is_safe"] else "NG",
+            "details": {
+                "tahap_1_gross_section": gross_props,
+                "tahap_2_net_section": net_props,
+                "tahap_3_stress": stress_props,
+                "tahap_4_unity_check": uc_props
+            }
+        }

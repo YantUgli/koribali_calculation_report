@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from app.utils.response import success_response, error_response
+from app.utils.response import success_response, error_response, success_response_status
 from .schemas import OpeningPartInput
 from .services import evaluate_pole_opening
 
@@ -17,10 +17,33 @@ def calculate_opening():
         result = evaluate_pole_opening(input_data)
         
         # return jsonify(result), 200
-        return success_response(data=result, message="Calculate Opening Part Success!")
+        # print(type(result))
+        return success_response(data=result)
     
         
     except TypeError as e:
-        return jsonify({"error": "Data input tidak valid atau ada parameter yang hilang", "details": str(e)}), 400
+        return error_response(errors=e.args, status_code=400)
     except Exception as e:
-        return jsonify({"error": "Terjadi kesalahan internal", "details": str(e)}), 500
+        return error_response(errors=e.args, status_code=500)
+    
+
+@opening_bp.route('/calculate-status', methods=['POST'])
+def calculate_opening_status():
+    payload = request.get_json()
+    
+    try:
+        # Validasi/mapping input ke Schema DTO
+        input_data = OpeningPartInput(**payload)
+        
+        # Eksekusi orchestrator
+        result = evaluate_pole_opening(data=input_data, type=1)
+        
+        # return jsonify(result), 200
+        # print(type(result))
+        return success_response_status(data=result)
+    
+        
+    except TypeError as e:
+        return error_response(errors=e.args, status_code=400)
+    except Exception as e:
+        return error_response(errors=e.args, status_code=500)
