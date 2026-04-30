@@ -18,7 +18,7 @@ def calculate_opening():
         
         # return jsonify(result), 200
         # print(type(result))
-        return success_response(data=result)
+        return success_response(data=result, message="berhasil calc!")
     
         
     except TypeError as e:

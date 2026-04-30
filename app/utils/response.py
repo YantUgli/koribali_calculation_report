@@ -4,7 +4,8 @@ def success_response(data=None, message=None, status_code=200):
     """Format standard untuk response sukses."""
     response = {
         "success" : True,
-        "data": data
+        "data": data,
+        "unique_code" : 2
     }
 
     if message:
